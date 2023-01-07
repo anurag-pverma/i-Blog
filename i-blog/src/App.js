@@ -1,11 +1,11 @@
 import { Box, useColorModeValue } from "@chakra-ui/react";
 import Navbar from "./Components/Navbar";
-import { Route, Routes } from "react-router-dom";
-import Homepage from "./Pages/Homepage";
-import Articles from "./Pages/Articles";
-import CreateArticle from "./Pages/CreateArticle";
-import Article from "./Pages/Article";
-import UpdateArticle from "./Pages/UpdateArticle";
+// // import { Route, Routes } from "react-router-dom";
+// import Homepage from "./Pages/Homepage";
+// import Articles from "./Pages/Articles";
+// import CreateArticle from "./Pages/CreateArticle";
+// import Article from "./Pages/Article";
+// import UpdateArticle from "./Pages/UpdateArticle";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
       color={useColorModeValue("black", "gray.200")}
     >
       <Navbar />
-      <Routes>
+      {/* <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/articles" element={<Articles />} />
         <Route path="/articles/:id" element={<Article />} />
@@ -23,7 +23,7 @@ function App() {
         <Route path="/articles/:id/update" element={<UpdateArticle />} />
 
         <Route path="/create" element={<CreateArticle />} />
-      </Routes>
+      </Routes> */}
     </Box>
   );
 }
