@@ -20,6 +20,7 @@ import {
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import ColorModeSwitcher from "./ColorModeSwitcher";
 import { useNavigate } from "react-router-dom";
+import CurrentTime from "./CurrentTime";
 
 const Navbar = () => {
   const { isOpen, onToggle, onClose } = useDisclosure();
@@ -97,6 +98,7 @@ const Navbar = () => {
               >
               Create Article
               </Text>
+
               <Center>
                 <Flex display={{ base: "none", md: "flex" }} ml={10}>
                 </Flex>

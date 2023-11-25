@@ -12,45 +12,46 @@ import { Provider } from "react-redux";
 import { store } from "./Redux/store";
 
 import {
-  createBrowserRouter,
-  RouterProvider,
+  BrowserRouter,
+  // createBrowserRouter,
+  // RouterProvider,
 } from "react-router-dom";
-import CreateArticle from "./Pages/CreateArticle";
-import UpdateArticle from "./Pages/UpdateArticle";
-import Article from "./Pages/Article";
-import Articles from "./Pages/Articles";
-import Homepage from "./Pages/Homepage";
+// import CreateArticle from "./Pages/CreateArticle";
+// import UpdateArticle from "./Pages/UpdateArticle";
+// import Article from "./Pages/Article";
+// import Articles from "./Pages/Articles";
+// import Homepage from "./Pages/Homepage";
 
-axios.defaults.baseURL = "https://lavender-cuff.cyclic.app";
+axios.defaults.baseURL = "  http://localhost:8080";
 axios.defaults.headers.post["Content-Type"] = "application/json";
 
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element:<App />,
-  },
-  {
-    path: "/",
-    element:<Homepage />,
-  },
-  {
-    path: "/articles",
-    element:<Articles />,
-  },
-  {
-    path: "/articles/:id",
-    element:<Article />,
-  },
-  {
-    path: "/articles/:id/update",
-    element:<UpdateArticle />,
-  },
-  {
-    path: "/create",
-    element:<CreateArticle />,
-  },
-]);
+// const router = createBrowserRouter([
+//   {
+//     path: "/",
+//     element:<App />,
+//   },
+//   {
+//     path: "/",
+//     element:<Homepage />,
+//   },
+//   {
+//     path: "/articles",
+//     element:<Articles />,
+//   },
+//   {
+//     path: "/articles/:id",
+//     element:<Article />,
+//   },
+//   {
+//     path: "/articles/:id/update",
+//     element:<UpdateArticle />,
+//   },
+//   {
+//     path: "/create",
+//     element:<CreateArticle />,
+//   },
+// ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -58,10 +59,10 @@ root.render(
     <ChakraProvider theme={theme}>
       <ColorModeScript />
       <Provider store={store}>
-        {/* <BrowserRouter>
-    
-        </BrowserRouter> */}
-          <RouterProvider router={router} />
+        <BrowserRouter>
+        <App />
+        </BrowserRouter>
+          {/* <RouterProvider router={router} /> */}
       </Provider>
     </ChakraProvider>
   </React.StrictMode>

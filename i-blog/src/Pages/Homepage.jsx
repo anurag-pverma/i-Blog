@@ -7,6 +7,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import React from "react";
+import CurrentTime from "../Components/CurrentTime";
 
 const Homepage = () => {
   return (
@@ -41,6 +42,10 @@ const Homepage = () => {
           >
             the World
           </Text>
+        </Heading>
+        <Heading>
+
+            <CurrentTime/>
         </Heading>
       </Stack>
     </Container>
